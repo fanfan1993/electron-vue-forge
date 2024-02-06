@@ -1,0 +1,73 @@
+.app-index {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #f2f3f7;
+
+    .head :deep() {
+        width: 100%;
+        height: 45px;
+        background-color: #ffffff;
+        position: sticky;
+        top: 0;
+        left: 0;
+        box-sizing: content-box;
+        border-bottom: 1px solid #ecefe6;
+        @include flex-row(center, flex-start);
+
+        .logo {
+            width: 58px;
+            height: 100%;
+            border-right: 1px solid #ecefe6;
+            @include flex-row(center, center);
+
+            img {
+                height: 22px;
+            }
+        }
+
+        .menu {
+            flex: 1;
+
+            .el-menu {
+                height: 45px !important;
+                border: none;
+
+                .el-menu-item {
+                    border: none;
+                }
+
+                .el-sub-menu__title {
+                    border: none;
+                }
+            }
+        }
+
+        .toolbar {
+            height: 100%;
+
+            @include flex-row(center, flex-end);
+
+            .button {
+                height: 100%;
+                width: 45px;
+                cursor: pointer;
+                @include flex-row(center, center);
+
+                &:hover {
+                    background-color: #ecf5ff;
+                }
+            }
+        }
+    }
+
+    .body {
+        flex: 1;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
